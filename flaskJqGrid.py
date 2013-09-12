@@ -68,6 +68,15 @@ includes="""js/kinetic-v4.6.0.min.js
             css/layout-default-latest.css
             themes/ui.multiselect.css"""
 
+from jinja2 import Environment, PackageLoader
+
+import sys
+env = Environment(loader=PackageLoader('flaskJqGrid', 'templates'))
+template = env.get_template('jqlayout.html')
+
+print template.render()
+sys.exit(0)
+
 @app.route("/")
 def hello():
 	#print url_for("static", filename="style.css")
