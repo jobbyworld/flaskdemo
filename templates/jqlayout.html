@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>jqGrid Demos</title>
+<title>flask jqGrid Demo</title>
   
 <link rel="stylesheet" type="text/css" media="screen" href="static/themes/redmond/jquery-ui-1.8.2.custom.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="static/themes/ui.jqgrid.css" />
@@ -52,7 +52,7 @@ html, body {
 <script type="text/javascript">
 
 jQuery(document).ready(function(){
-    //$('#switcher').themeswitcher();
+   // $('#switcher').themeswitcher();
 
 	$('body').layout({
 		resizerClass: 'ui-state-default',
@@ -61,6 +61,7 @@ jQuery(document).ready(function(){
 		}
 	});
 	$.jgrid.defaults = $.extend($.jgrid.defaults,{loadui:"enable"});
+	/*
 	var maintab =jQuery('#tabs','#RightPane').tabs({
         add: function(e, ui) {
             // append close thingy
@@ -73,7 +74,8 @@ jQuery(document).ready(function(){
             // select just added tab
             maintab.tabs('select', '#' + ui.panel.id);
         }
-    });
+    });// end maintab
+    */
     jQuery("#west-grid").jqGrid({
         url: "static/tree.xml",
         datatype: "xml",
@@ -122,22 +124,22 @@ jQuery(document).ready(function(){
 		<table id="west-grid"></table>
 	</div> <!-- #LeftPane -->
 	<div id="RightPane" class="ui-layout-center ui-helper-reset ui-widget-content" ><!-- Tabs pane -->
-    <div id="switcher"></div>
-		<div id="tabs" class="jqgtabs">
-			<ul>
-				<li><a href="#tabs-1">jqGrid 3.6</a></li>
-			</ul>
-			<div id="tabs-1" style="font-size:12px;"> Many Thanks to Mark Williams which do the most of the new things added in 3.6<br/>
-			<br/>
-			Enjoy
+		<div id="switcher"></div>
+		<!--
+		
+			<div id="tabs" class="jqgtabs">
+			
+			<div id="tabs-1" style="font-size:12px;"> <br/>
+			
 			</div>
 		</div>
+		-->
 	</div> <!-- #RightPane -->
 </body>
 <!-- Piwik -->
 <script type="text/javascript">
-var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.trirand.com/piwik/" : "http://www.trirand.com/piwik/");
-document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+//var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.trirand.com/piwik/" : "http://www.trirand.com/piwik/");
+//document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
 </script>
 <!-- End Piwik Tag --> 
 </html>
